@@ -11,32 +11,30 @@ def manage_books
   choice = gets.chomp.to_i
 
   case choice
-    when 1
-        if @books.empty? 
-            return puts 'There are No Books in collection yet!'
-        end
-        @books.each do |book|
-            puts "------------------------------"
-            puts "Publisher: #{book.publisher} "
-            puts "Cover Status: #{book.cover_state} "
-            puts "published on: #{book.publish_date}"
-            puts "------------------------------"
-        end
-    when 2
-        puts 'label here'
-    when 3
-        puts 'Enter book Publisher'
-        publisher = gets.chomp
+  when 1
+    return puts 'There are No Books in collection yet!' if @books.empty?
 
-        puts 'Enter book cover state (new/bad)'
-        cover_state = gets.chomp.downcase
-
-        puts 'Enter Published Date:'
-        published_at = gets.chomp
-
-        @books << Book.new(publisher, cover_state, published_at)
-    when 4
-        return
+    @books.each do |book|
+      puts '------------------------------'
+      puts "Publisher: #{book.publisher} "
+      puts "Cover Status: #{book.cover_state} "
+      puts "published on: #{book.publish_date}"
+      puts '------------------------------'
     end
+  when 2
+    puts 'label here'
+  when 3
+    puts 'Enter book Publisher'
+    publisher = gets.chomp
 
+    puts 'Enter book cover state (new/bad)'
+    cover_state = gets.chomp.downcase
+
+    puts 'Enter Published Date:'
+    published_at = gets.chomp
+
+    @books << Book.new(publisher, cover_state, published_at)
+  when 4
+    nil
+  end
 end
