@@ -17,9 +17,13 @@ def add_book
   puts 'Enter Published Date:'
   published_at = gets.chomp
 
-  @books << Book.new(publisher, cover_state, published_at)
+  book = Book.new(publisher, cover_state, published_at)
+  @books << book
 
-  @labels << Label.new(title, color)
+  label = Label.new(title, color)
+  label.add_item(book)
+
+  @labels << label
 
   puts 'Book created Successfully!'
 end
