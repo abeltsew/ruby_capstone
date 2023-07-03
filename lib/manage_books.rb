@@ -37,7 +37,7 @@ def manage_books
   when 1
     return puts 'There are No Books in collection yet!' if @books.empty?
 
-    list_book
+    list_books
   when 2
     puts 'label here'
   when 3
