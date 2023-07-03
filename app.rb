@@ -9,6 +9,7 @@ class App
     @books = []
     @music = []
     @games = []
+    @labels = []
   end
 
   def load_data

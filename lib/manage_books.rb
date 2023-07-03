@@ -1,6 +1,13 @@
 require_relative '../book'
+require_relative '../label'
 
 def add_book
+  puts 'Enter the name of the Book'
+  title = gets.chomp
+
+  puts 'Enter the color of the Book'
+  color = gets.chomp
+
   puts 'Enter book Publisher'
   publisher = gets.chomp
 
@@ -11,6 +18,10 @@ def add_book
   published_at = gets.chomp
 
   @books << Book.new(publisher, cover_state, published_at)
+
+  @labels << Label.new(title, color)
+
+  puts 'Book created Successfully!'
 end
 
 def list_books
@@ -21,6 +32,10 @@ def list_books
     puts "published on: #{book.publish_date}"
     puts '------------------------------'
   end
+end
+
+def list_labels
+  @labels.each { |label| puts "Title: #{label.title} color: #{label.color}" }
 end
 
 def manage_books
@@ -35,11 +50,13 @@ def manage_books
 
   case choice
   when 1
-    return puts 'There are No Books in collection yet!' if @books.empty?
+    return puts 'There are No Books in the collection yet!' if @books.empty?
 
     list_books
   when 2
-    puts 'label here'
+    return puts 'There are No labels in the collection yet!' if @labels.empty?
+
+    list_labels
   when 3
     add_book
   when 4
