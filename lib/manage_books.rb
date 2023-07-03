@@ -1,5 +1,28 @@
 require_relative '../book'
 
+def add_book
+  puts 'Enter book Publisher'
+  publisher = gets.chomp
+
+  puts 'Enter book cover state (new/bad)'
+  cover_state = gets.chomp.downcase
+
+  puts 'Enter Published Date:'
+  published_at = gets.chomp
+
+  @books << Book.new(publisher, cover_state, published_at)
+end
+
+def list_books
+  @books.each do |book|
+    puts '------------------------------'
+    puts "Publisher: #{book.publisher} "
+    puts "Cover Status: #{book.cover_state} "
+    puts "published on: #{book.publish_date}"
+    puts '------------------------------'
+  end
+end
+
 def manage_books
   puts 'Choose your action for your books'
 
@@ -14,26 +37,11 @@ def manage_books
   when 1
     return puts 'There are No Books in collection yet!' if @books.empty?
 
-    @books.each do |book|
-      puts '------------------------------'
-      puts "Publisher: #{book.publisher} "
-      puts "Cover Status: #{book.cover_state} "
-      puts "published on: #{book.publish_date}"
-      puts '------------------------------'
-    end
+    list_book
   when 2
     puts 'label here'
   when 3
-    puts 'Enter book Publisher'
-    publisher = gets.chomp
-
-    puts 'Enter book cover state (new/bad)'
-    cover_state = gets.chomp.downcase
-
-    puts 'Enter Published Date:'
-    published_at = gets.chomp
-
-    @books << Book.new(publisher, cover_state, published_at)
+    add_book
   when 4
     nil
   end
