@@ -80,36 +80,38 @@ end
 
 def save_authors
   json = []
-  @authors.each { |author|
+  @authors.each do |author|
     json << author.to_json
-  }
+  end
   File.write('db/authors.json', JSON.pretty_generate(json))
 end
 
 def save_games
   json = []
-  @games.each { |game|
+  @games.each do |game|
     json << game.to_json
-  }
+  end
   File.write('db/games.json', JSON.pretty_generate(json))
 end
 
 def load_authors
-  return if !File.exist?("db/authors.json")
-  return if File.empty?("db/authors.json")
-  authors = JSON.parse(File.read("db/authors.json"))
-  authors.each { |author|
+  return unless File.exist?('db/authors.json')
+  return if File.empty?('db/authors.json')
+
+  authors = JSON.parse(File.read('db/authors.json'))
+  authors.each do |author|
     @authors << Author.new(author['first_name'], author['last_name'])
-  }
+  end
 end
 
 def load_games
-  return if !File.exist?("db/games.json")
-  return if File.empty?("db/games.json")
-  games = JSON.parse(File.read("db/games.json"))
-  games.each { |game|
+  return unless File.exist?('db/games.json')
+  return if File.empty?('db/games.json')
+
+  games = JSON.parse(File.read('db/games.json'))
+  games.each do |game|
     @games << Game.new(game['last_played_at'], game['publish_date'], multiplayer: game['multiplayer'])
-  }
+  end
 end
 
 def load_game_data

@@ -14,13 +14,13 @@ class Game < Item
     super and is_expired ? true : false
   end
 
-  def to_json
+  def to_json(*_args)
     {
-      "id" => @id,
-      "multiplayer" => @multiplayer,
-      "last_played_at" => @last_played_at,
-      "publish_date" => @publish_date,
-      "archived" => @archived,
+      'id' => @id,
+      'multiplayer' => @multiplayer,
+      'last_played_at' => @last_played_at,
+      'publish_date' => @publish_date,
+      'archived' => @archived
     }
   end
 end

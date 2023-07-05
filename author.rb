@@ -14,22 +14,22 @@ class Author
     item.author = self
   end
 
-  def to_json
+  def to_json(*_args)
     author = {
-      "id" => @id,
-      "first_name" => @first_name,
-      "last_name" => @last_name,
-      "items" => []
+      'id' => @id,
+      'first_name' => @first_name,
+      'last_name' => @last_name,
+      'items' => []
     }
-    @items.each {|item| 
-    author['items'] << {
-      "id" => item.id,
-      "multiplayer" => item.multiplayer,
-      "last_played_at" => item.last_played_at,
-      "publish_date" => item.publish_date,
-      "archived" => item.archived
+    @items.each do |item|
+      author['items'] << {
+        'id' => item.id,
+        'multiplayer' => item.multiplayer,
+        'last_played_at' => item.last_played_at,
+        'publish_date' => item.publish_date,
+        'archived' => item.archived
       }
-    }
-    return author
+    end
+    author
   end
 end
