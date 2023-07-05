@@ -17,6 +17,7 @@ class App
   def load_data
     puts 'Loading data here..'
     load_books
+    load_game_data
   end
 
   def save_exit
