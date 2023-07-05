@@ -19,5 +19,22 @@ CREATE TABLE books(
     PRIMARY KEY (id)
 );
 
-CREATE INDEX label_idx ON books (label_id);
+CREATE TABLE Author(
+    id int generated always as identity,
+    first_name varchar(50),
+    last_name varchar(50),
+    primary key (id)
+);
 
+CREATE TABLE Games(
+    id Int generated always as identity,
+    multplayer  boolean,
+    last_played_at  date,
+    publish_date  date,
+    archived  boolean,
+    author_id  int,
+    CONSTRAINT fk_label FOREIGN KEY (author_id) REFERENCES Author(id),
+    PRIMARY KEY (id)
+);
+
+CREATE INDEX label_idx ON books (label_id);
