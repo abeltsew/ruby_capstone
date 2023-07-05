@@ -10,6 +10,7 @@ class App
     @music = []
     @games = []
     @labels = []
+    @authors = []
     @genres = []
   end
 
