@@ -11,6 +11,7 @@ class App
     @games = []
     @labels = []
     @authors = []
+    @genres = []
   end
 
   def load_data
