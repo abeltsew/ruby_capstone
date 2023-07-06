@@ -6,28 +6,32 @@ def game_options
   puts 'Please enter the number of the option to proceed'
   puts '1. List all games'
   puts '2. List all authors'
-  puts '3. Add a game'
-  puts '4. return'
+  puts '3. List all labels'
+  puts '4. List all geners'
+  puts '5. Add a game'
+  puts '6. return'
   print '>>> :'
 end
 
 def manage_games
-  loop do
-    puts
-    game_options
-    option = gets.chomp.to_i
-    case option
-    when 1
-      list_all_games
-    when 2
-      list_all_authors
-    when 3
-      add_game
-    when 4
-      break
-    else
-      puts 'Invalid option, please enter the number (eg. "1")'
-    end
+  puts
+  game_options
+  option = gets.chomp.to_i
+  case option
+  when 1
+    list_all_games
+  when 2
+    list_all_authors
+  when 3
+    list_labels
+  when 4
+    genre_lists
+  when 5
+    add_game
+  when 6
+    nil
+  else
+    puts 'Invalid option, please enter the number (eg. "1")'
   end
 end
 

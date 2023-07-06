@@ -74,25 +74,31 @@ def genre_lists
   @genres.each { |genre| puts genre.name }
 end
 
-def manage_music
+def option_list_music
   puts 'Enter the number corresponding to your choice:'
   puts '1 - List all Music Albums'
   puts '2 - List genres'
-  puts '3 - Add Music Album'
-  puts '4 - Back'
+  puts '3 - List all labels'
+  puts '4 - List all authors'
+  puts '5 - Add Music Album'
+  puts '6 - Back'
+end
+
+def manage_music
+  option_list_music
   users_election = gets.chomp.to_i
   case users_election
   when 1
-    return puts 'No music album available, try adding one!' if @music.empty?
-
     musics_list
   when 2
-    return puts 'No Music Genres available, try adding album!' if @genres.empty?
-
     genre_lists
   when 3
-    add_music
+    list_labels
   when 4
+    list_all_authors
+  when 5
+    add_music
+  when 6
     nil
   end
 end
