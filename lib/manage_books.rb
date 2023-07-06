@@ -97,28 +97,32 @@ def list_labels
   @labels.each { |label| puts "Title: #{label.title} color: #{label.color}" }
 end
 
-def manage_books
+def list_options
   puts 'Choose your action for your books'
-
   puts '1. List all books'
   puts '2. List all labels (e.g. Gift, New)'
-  puts '3. Add Book'
-  puts '4. return'
+  puts '3. List all Authors'
+  puts '4. List All geners'
+  puts '5. Add Book'
+  puts '6. return'
+end
 
+def manage_books
+  puts
+  list_options
   choice = gets.chomp.to_i
-
   case choice
   when 1
-    return puts 'There are No Books in the collection yet!' if @books.empty?
-
     list_books
   when 2
-    return puts 'There are No labels in the collection yet!' if @labels.empty?
-
     list_labels
   when 3
-    add_book
+    list_all_authors
   when 4
+    genre_lists
+  when 5
+    add_book
+  when 6
     nil
   end
 end
