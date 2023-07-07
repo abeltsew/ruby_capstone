@@ -1,25 +1,3 @@
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -28,6 +6,7 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [Video Presentation](#video)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -43,7 +22,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [OOP School library] <a name="about-project"></a>
+# 📖 [Ruby Group capstone] <a name="about-project"></a>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,6 +46,8 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## [Video Presentation](https://drive.google.com/file/d/1nWvxB4jXWXincL_TegTb2Lf8TJSOlEit/view?usp=sharing) <a name="video"></a>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -82,7 +63,7 @@ In order to run this project you need: to install ruby
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/abeltsew/oop-school-library.git
+  git clone https://github.com/abeltsew/ruby_capstone.git
 ```
 
 ### Install
@@ -111,6 +92,16 @@ To run the project, execute the following command:
 - GitHub: [@abeltsew](https://github.com/abeltsew)
 - Twitter: [@abeltsew](https://twitter.com/abeltsew)
 - LinkedIn: [abeltsew](https://linkedin.com/in/abeltsew)
+
+👤 **Ubda Nam**
+
+- GitHub: [@UbdaNam](https://github.com/UbdaNam)
+- LinkedIn: [Abdurahim M.](https://www.linkedin.com/in/abdurahim-miftah/)
+
+👤 **Rushema Anicet**
+
+- GitHub: [@rushemaa](https://github.com/rushemaa)
+- LinkedIn: [Rushema Anicet](https://www.linkedin.com/in/rushema-anicet-77494088/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
